@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dee2e6;
+    display: grid;
+    grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(5, 20vw);
+    gap: 10px;
+    padding: 10px;
+}
+
+article.css-layout {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Avatar */
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #37b24d;
+    position: relative;
+}
+
+.avatar__image {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+
+.avatar__verify {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #2f9e44;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(2.2rem, 2.2rem);
+}
+
+/* Avatar list */
+.avatars {
+    display: flex;
+}
+
+.avatars__item:not(:first-of-type) {
+    margin-left: -0.5rem;
+}
+
+.avatars__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 0.1rem #fff;
+}
+
+/* Stacked cards */
+.stacked-cards {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    background-color: #ffec99;
+    border: 1px solid #ffe066;
+    border-radius: 0.25rem;
+}
+
+.stacked-cards__card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffec99;
+    border: 1px solid #ffe066;
+    border-radius: 0.25rem;
+    transform: rotate(var(--deg));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
